@@ -22,3 +22,6 @@ app.use("/user", userRoutes);
 app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}`);
 });
+
+// Export the Express API
+module.exports = app
