@@ -3,6 +3,7 @@ const connectDB = require("./config/db");
 const authRoutes = require("./routes/authRoutes");
 const userRoutes = require("./routes/userRoutes");
 const productRoutes = require("./routes/productRoutes");
+const categoryRoutes = require("./routes/categoryRoutes");
 
 const app = express();
 const PORT = process.env.PORT || 8500;
@@ -21,6 +22,9 @@ app.use("/user", userRoutes);
 
 // Define product routes
 app.use("/product", productRoutes);
+
+// Define category routes
+app.use("/category", categoryRoutes);
 
 // Start the server
 app.listen(PORT, () => {
